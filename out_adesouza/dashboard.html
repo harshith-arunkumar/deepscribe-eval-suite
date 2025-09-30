@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset='utf-8'><title>Evals Dashboard</title>
+<style>
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; padding: 24px; }
+.card { border:1px solid #e5e8ef; border-radius: 12px; padding: 16px; margin: 16px 0; }
+table { width:100%; border-collapse: collapse; }
+th, td { border-bottom:1px solid #eef2f7; padding:8px; font-size:14px; text-align:left; }
+th { background:#f8fafc; }
+.kv { display:flex; gap:24px; flex-wrap:wrap; }
+.kv .item { min-width:180px; }
+.kv .k { color:#556; font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
+.kv .v { font-size:20px; font-weight:600; }
+</style></head><body>
+<h1>DeepScribe Evals Dashboard</h1>
+<div class="card kv">
+  <div class="item"><div class="k">Cases</div><div class="v">9</div></div>
+  <div class="item"><div class="k">Avg Missing</div><div class="v">0.44</div></div>
+  <div class="item"><div class="k">Avg Hallucinated</div><div class="v">2.78</div></div>
+  <div class="item"><div class="k">Avg Contradictions</div><div class="v">1.00</div></div>
+  <div class="item"><div class="k">Avg Ref F1</div><div class="v">0.58</div></div>
+</div>
+<div class="card">
+  <h3>Per-Case Metrics</h3>
+  <table>
+    <thead><tr><th>Case</th><th>Missing</th><th>Hallucinated</th><th>Contradictions</th><th>Ref P</th><th>Ref R</th><th>Ref F1</th></tr></thead>
+    <tbody><tr><td>ex_000000</td><td>0</td><td>1</td><td>0</td><td>1.00</td><td>1.00</td><td>1.00</td></tr><tr><td>ex_000001</td><td>0</td><td>3</td><td>2</td><td>1.00</td><td>1.00</td><td>1.00</td></tr><tr><td>ex_000002</td><td>2</td><td>4</td><td>1</td><td>0.71</td><td>1.00</td><td>0.83</td></tr><tr><td>ex_000003</td><td>1</td><td>2</td><td>1</td><td>0.00</td><td>0.00</td><td>0.00</td></tr><tr><td>ex_000004</td><td>0</td><td>2</td><td>1</td><td>0.33</td><td>1.00</td><td>0.50</td></tr><tr><td>ex_000005</td><td>0</td><td>4</td><td>1</td><td>0.50</td><td>1.00</td><td>0.67</td></tr><tr><td>ex_000006</td><td>1</td><td>5</td><td>1</td><td>0.50</td><td>0.67</td><td>0.57</td></tr><tr><td>ex_000007</td><td>0</td><td>2</td><td>1</td><td>0.50</td><td>1.00</td><td>0.67</td></tr><tr><td>ex_000008</td><td>0</td><td>2</td><td>1</td><td>0.00</td><td>0.00</td><td>0.00</td></tr></tbody>
+  </table>
+</div>
+<p style="color:#789">Deterministic rules; enable LLM-judge for deeper audits.</p>
+</body></html>

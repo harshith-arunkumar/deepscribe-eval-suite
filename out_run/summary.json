@@ -1,0 +1,9 @@
+{
+  "num_cases": 3,
+  "avg_missing": 1.6666666666666667,
+  "avg_hallucinated": 1.6666666666666667,
+  "avg_contradictions": 0.3333333333333333,
+  "avg_ref_precision": 0.746031746031746,
+  "avg_ref_recall": 0.7314814814814815,
+  "avg_ref_f1": 0.7355072463768115
+}

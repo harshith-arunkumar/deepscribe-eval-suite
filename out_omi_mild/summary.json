@@ -1,0 +1,14 @@
+{
+  "num_cases": 9250,
+  "avg_missing": 0.46172972972972975,
+  "avg_hallucinated": 0.43945945945945947,
+  "avg_contradictions": 0.13891891891891892,
+  "avg_ref_precision": 0.47296182976182977,
+  "avg_ref_recall": 0.4409805897516424,
+  "avg_ref_f1": 0.4486450857682015,
+  "avg_bleu": 0.8528787931254569,
+  "avg_rouge_l_f": 0.9269205804233228,
+  "avg_llm_completeness": null,
+  "avg_llm_grounding": null,
+  "avg_llm_clinical_accuracy": null
+}

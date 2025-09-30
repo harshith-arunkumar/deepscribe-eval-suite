@@ -1,0 +1,37 @@
+<!doctype html>
+<html><head><meta charset='utf-8'><title>Evals Dashboard</title>
+<style>
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; padding: 24px; }
+.card { border:1px solid #e5e8ef; border-radius: 12px; padding: 16px; margin: 16px 0; }
+table { width:100%; border-collapse: collapse; }
+th, td { border-bottom:1px solid #eef2f7; padding:8px; font-size:14px; text-align:left; }
+th { background:#f8fafc; }
+.kv { display:flex; gap:24px; flex-wrap:wrap; }
+.kv .item { min-width:180px; }
+.kv .k { color:#556; font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
+.kv .v { font-size:20px; font-weight:600; }
+</style></head><body>
+<h1>DeepScribe Evals Dashboard</h1>
+<div class="card kv">
+  <div class="item"><div class="k">Cases</div><div class="v">2</div></div>
+  <div class="item"><div class="k">Avg Missing</div><div class="v">0.00</div></div>
+  <div class="item"><div class="k">Avg Hallucinated</div><div class="v">2.00</div></div>
+  <div class="item"><div class="k">Avg Contradictions</div><div class="v">1.00</div></div>
+  <div class="item"><div class="k">Avg Ref F1</div><div class="v">0.00</div></div>
+  <div class="item"><div class="k">Avg BLEU</div><div class="v">0.622</div></div>
+  <div class="item"><div class="k">Avg ROUGE-L(F)</div><div class="v">0.793</div></div>
+  <div class='item'><div class='k'>Avg LLM Completeness</div><div class='v'>3.50</div></div><div class='item'><div class='k'>Avg LLM Grounding</div><div class='v'>3.00</div></div><div class='item'><div class='k'>Avg LLM Clinical</div><div class='v'>3.00</div></div>
+</div>
+<div class="card">
+  <h3>Per-Case Metrics</h3>
+  <table>
+    <thead><tr>
+      <th>Case</th><th>Missing</th><th>Hallucinated</th><th>Contradictions</th>
+      <th>Ref P</th><th>Ref R</th><th>Ref F1</th>
+      <th>BLEU</th><th>ROUGE-L(F)</th><th>LLM Comp</th><th>LLM Ground</th><th>LLM Clin</th>
+    </tr></thead>
+    <tbody><tr><td>ex_000000</td><td>0</td><td>2</td><td>1</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.637</td><td>0.800</td><td>2</td><td>1</td><td>1</td></tr><tr><td>ex_000001</td><td>0</td><td>2</td><td>1</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.607</td><td>0.785</td><td>5</td><td>5</td><td>5</td></tr></tbody>
+  </table>
+</div>
+<p style="color:#789">BLEU/ROUGE-L complement fact-level metrics; they are not substitutes for clinical correctness.</p>
+</body></html>

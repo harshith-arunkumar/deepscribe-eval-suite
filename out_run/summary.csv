@@ -1,0 +1,4 @@
+id,missing_count,hallucinated_count,contradictions_count,ref_precision,ref_recall,ref_f1
+case_001,0,1,0,0.9166666666666666,1.0,0.9565217391304348
+case_002,2,2,0,0.5714285714285714,0.4444444444444444,0.5
+case_003,3,2,1,0.75,0.75,0.75

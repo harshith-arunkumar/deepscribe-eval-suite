@@ -1,0 +1,5 @@
+datasets>=2.19.0
+requests>=2.32.3
+
+# optional if you keep OpenAI as a fallback
+openai>=1.40.0
