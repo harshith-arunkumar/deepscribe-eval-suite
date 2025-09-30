@@ -91,9 +91,9 @@ def prf1(pred_facts: List[Fact], ref_facts: List[Fact]) -> Dict[str, float]:
     F1 = 0.0 if (P == 0.0 and R == 0.0) else (2 * P * R) / (P + R)
     return {"precision": P, "recall": R, "f1": F1}
 
-# ---------------------------
+# ---------------------------------------------------------------
 # Text overlap metrics (BLEU, ROUGE-L) -- deterministic, no deps
-# ---------------------------
+# ---------------------------------------------------------------
 
 def _tok(s: str) -> List[str]:
     # simple whitespace tokenization; could be replaced with smarter tokenizer

@@ -25,7 +25,7 @@ def _safe_parse_json(s: str) -> Optional[Dict[str, Any]]:
                 return None
     return None
 
-# ------------ OpenAI backend (optional, unchanged) ------------
+# ------------ OpenAI backend ------------
 def judge_with_openai(transcript: str, note: str, reference: str):
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
@@ -59,7 +59,7 @@ def judge_with_openai(transcript: str, note: str, reference: str):
         sys.stderr.write(f"[judge] OpenAI exception: {e}\n")
         return None
 
-# ------------ OpenRouter backend (new) ------------
+# ------------ OpenRouter backend ------------
 def judge_with_openrouter(transcript: str, note: str, reference: str, model_name: Optional[str]):
     """
     Calls OpenRouter's /chat/completions endpoint.
